@@ -3,13 +3,13 @@ import type {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
 
 export type RootStackParamList = {
   Root: undefined;
-  RootChats: undefined;
+  Chat: undefined;
   RootInfo: undefined;
 };
 
 export type ChatsScreenProps = NativeStackScreenProps<
   RootStackParamList,
-  'RootChats'
+  'Chat'
 >;
 
 export type InfoScreenProps = NativeStackScreenProps<
@@ -37,12 +37,23 @@ type MessageType = {
   text: string;
   last_update: string;
   isRead: boolean;
+  byMe?: boolean;
 };
 
-export type ChatListType = {
+export type ChatMessageType = {
   chat_id: string;
   name: string;
   phone: string;
+  my_number: string;
   message: MessageType;
+  image: string;
+};
+
+export type ChatDetailMessageType = {
+  chat_id: string;
+  name: string;
+  phone: string;
+  my_number: string;
+  message: MessageType[];
   image: string;
 };

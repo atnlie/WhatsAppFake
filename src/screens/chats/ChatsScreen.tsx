@@ -1,28 +1,32 @@
 import React from 'react';
-import {Alert, FlatList} from 'react-native';
+import {FlatList} from 'react-native';
 import {Colors, View, Image, ListItem, Text} from 'react-native-ui-lib';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import chats_dummy from '../../data/chats.ts';
-import {ChatListType} from '../../types.tsx';
+import {ChatMessageType} from '../../types.tsx';
 import styles from './ChatsScreen.styles.ts';
 
 type ChatsScreenProps = {
   navigation: NativeStackNavigationProp<any, 'Chats'>;
 };
 
-const ChatsScreen: React.FC<ChatsScreenProps> = () => {
-  let keyExtractor = (item: ChatListType) => item.chat_id;
+const ChatsScreen: React.FC<ChatsScreenProps> = ({navigation}) => {
+  const chatDetail = (chatProps: ChatMessageType) => {
+    navigation.navigate('Chat', {chatProps});
+  };
+  let keyExtractor = (item: ChatMessageType) => item.chat_id;
 
-  function renderRow(row: ChatListType, id: number) {
+  function renderRow(row: ChatMessageType, id: number) {
     const statusColor = row.message.isRead ? Colors.green30 : Colors.grey30;
 
     return (
       <View>
         <ListItem
+          key={id}
           activeBackgroundColor={Colors.grey60}
           activeOpacity={0.3}
           height={77.5}
-          onPress={() => Alert.alert(`pressed on #${id + 1}`)}>
+          onPress={() => chatDetail(row)}>
           <ListItem.Part left>
             <Image source={{uri: row.image}} style={styles.image} />
           </ListItem.Part>

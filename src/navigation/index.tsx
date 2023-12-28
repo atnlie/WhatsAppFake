@@ -3,8 +3,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BottomTabNav from './BottomTabNav.tsx';
 import {RootStackParamList} from '../types.tsx';
-import ChatScreen from '../screens/ChatScreen.tsx';
+import ChatScreen from '../screens/ChatDetails/ChatScreen.tsx';
 
+//function Navigation(root: string, p: {screen: string}) {
 function Navigation() {
   return (
     <NavigationContainer>
@@ -26,7 +27,7 @@ function RootNavigator() {
         }}
       />
       <Stack.Screen
-        name="RootChats"
+        name="Chat"
         component={ChatScreen}
         options={{
           headerBackTitle: '',

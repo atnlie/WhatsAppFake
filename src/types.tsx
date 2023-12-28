@@ -2,18 +2,19 @@ import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 import type {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
 
 export type RootStackParamList = {
-  Chats: undefined;
-  Info: {placeId: number};
+  Root: undefined;
+  RootChats: undefined;
+  RootInfo: undefined;
 };
 
 export type ChatsScreenProps = NativeStackScreenProps<
   RootStackParamList,
-  'Chats'
+  'RootChats'
 >;
 
 export type InfoScreenProps = NativeStackScreenProps<
   RootStackParamList,
-  'Info'
+  'RootInfo'
 >;
 
 export type BottomTabParamList = {
@@ -30,3 +31,18 @@ export type InfoDetailsTabProps = BottomTabScreenProps<
   BottomTabParamList,
   'Info'
 >;
+
+// message
+type MessageType = {
+  text: string;
+  last_update: string;
+  isRead: boolean;
+};
+
+export type ChatListType = {
+  chat_id: string;
+  name: string;
+  phone: string;
+  message: MessageType;
+  image: string;
+};

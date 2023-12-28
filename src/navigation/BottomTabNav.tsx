@@ -2,14 +2,18 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {MessageCircle, Info} from 'react-native-feather';
 
-import ChatsScreen from '../screens/ChatsScreen.tsx';
+import ChatsScreen from '../screens/chats/ChatsScreen.tsx';
 import InfoScreen from '../screens/InfoScreen.tsx';
 import type {BottomTabParamList} from '../types';
 
 const Tab = createBottomTabNavigator<BottomTabParamList>();
 function BottomTabNav() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      initialRouteName="Chats"
+      screenOptions={{
+        tabBarLabelStyle: {fontSize: 12, fontWeight: 'bold'},
+      }}>
       <Tab.Screen
         key="Chats"
         name="Chats"
@@ -27,6 +31,7 @@ function BottomTabNav() {
         }}
       />
       <Tab.Screen
+        key="Info"
         name="Info"
         component={InfoScreen}
         options={{

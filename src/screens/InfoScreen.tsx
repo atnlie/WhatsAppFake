@@ -9,8 +9,8 @@ type ChatScreenProps = {
 const InfoScreen: React.FC<ChatScreenProps> = ({navigation}) => {
   return (
     <View>
-      <Text>WhatsApp Home Screen</Text>
-      <Button title="Go To Home" onPress={() => navigation.navigate('Home')} />
+      <Text>WhatsApp Info Screen</Text>
+      <Button title="Go To Home" onPress={() => navigation.navigate('Chats')} />
     </View>
   );
 };

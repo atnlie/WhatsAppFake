@@ -32,8 +32,13 @@ export type InfoDetailsTabProps = BottomTabScreenProps<
   'Info'
 >;
 
+export type BubbleMessageProps = {
+  conversation: MessageType;
+};
+
 // message
-type MessageType = {
+export type MessageType = {
+  id?: number;
   text: string;
   last_update: string;
   isRead: boolean;
@@ -46,7 +51,7 @@ export type ChatMessageType = {
   phone: string;
   my_number: string;
   message: MessageType;
-  image: string;
+  image?: string;
 };
 
 export type ChatDetailMessageType = {
@@ -55,5 +60,5 @@ export type ChatDetailMessageType = {
   phone: string;
   my_number: string;
   message: MessageType[];
-  image: string;
+  image?: string;
 };

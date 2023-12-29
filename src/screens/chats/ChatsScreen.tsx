@@ -5,6 +5,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import chats_dummy from '../../data/chats.ts';
 import {ChatMessageType} from '../../types.tsx';
 import styles from './ChatsScreen.styles.ts';
+import {CheckCircle, Check} from 'react-native-feather';
 
 type ChatsScreenProps = {
   navigation: NativeStackNavigationProp<any, 'Chats'>;
@@ -57,9 +58,11 @@ const ChatsScreen: React.FC<ChatsScreenProps> = ({navigation}) => {
                 numberOfLines={2}>
                 {row.message.text}
               </Text>
-              <Text text90 color={statusColor} numberOfLines={1}>
-                {row.message.isRead ? 'read' : 'unread'}
-              </Text>
+              {row.message.isRead ? (
+                <CheckCircle width={16} height={16} stroke={statusColor} />
+              ) : (
+                <Check width={16} height={16} stroke={statusColor} />
+              )}
             </ListItem.Part>
           </ListItem.Part>
         </ListItem>

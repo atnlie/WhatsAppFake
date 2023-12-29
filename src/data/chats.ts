@@ -8,7 +8,7 @@ const chats_dummy: Array<ChatMessageType> = [
     my_number: '+6282111111111',
     message: {
       text: 'Great bro! Happy to hear that',
-      last_update: 'today',
+      last_update: '2023-08-05T10:15:15.620Z',
       isRead: true,
     },
     image:
@@ -21,7 +21,7 @@ const chats_dummy: Array<ChatMessageType> = [
     my_number: '+6282111111111',
     message: {
       text: 'I would like to introduce friend of mine to you. Are you okay?',
-      last_update: 'today',
+      last_update: '2023-08-05T10:16:16.620Z',
       isRead: true,
     },
     image:
@@ -34,7 +34,7 @@ const chats_dummy: Array<ChatMessageType> = [
     my_number: '+6282111111111',
     message: {
       text: 'In entirely be to at settling felicity. Fruit two match men you seven share. ',
-      last_update: 'yesterday',
+      last_update: '2023-08-05T10:17:17.620Z',
       isRead: false,
     },
     image:
@@ -47,7 +47,7 @@ const chats_dummy: Array<ChatMessageType> = [
     my_number: '+6282111111111',
     message: {
       text: 'Started his hearted any civilly. So me by marianne admitted speaking. ',
-      last_update: 'yesterday',
+      last_update: '2023-08-05T10:18:18.620Z',
       isRead: false,
     },
     image:
@@ -60,7 +60,7 @@ const chats_dummy: Array<ChatMessageType> = [
     my_number: '+6282111111111',
     message: {
       text: 'Continual delighted as elsewhere am convinced unfeeling.',
-      last_update: 'yesterday',
+      last_update: '2023-08-05T10:19:15.620Z',
       isRead: true,
     },
     image:
@@ -74,7 +74,7 @@ const chats_dummy: Array<ChatMessageType> = [
     my_number: '+6282111111111',
     message: {
       text: 'hello whats up guys?',
-      last_update: 'yesterday',
+      last_update: '2023-08-05T10:20:15.620Z',
       isRead: true,
     },
     image:

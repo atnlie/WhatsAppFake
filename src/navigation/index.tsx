@@ -5,7 +5,6 @@ import BottomTabNav from './BottomTabNav.tsx';
 import {RootStackParamList} from '../types.tsx';
 import ChatScreen from '../screens/ChatDetails/ChatScreen.tsx';
 
-//function Navigation(root: string, p: {screen: string}) {
 function Navigation() {
   return (
     <NavigationContainer>
@@ -30,20 +29,10 @@ function RootNavigator() {
         name="Chat"
         component={ChatScreen}
         options={{
-          headerBackTitle: '',
+          headerBackTitle: 'back',
           // header: ({navigation}) => <ChatHeader navigation={navigation} />,
         }}
       />
-      {/*<Stack.Screen*/}
-      {/*  name="CreateNewChat"*/}
-      {/*  component={CreateNewChat}*/}
-      {/*  options={{*/}
-      {/*    headerBackTitle: "",*/}
-      {/*    header: ({ navigation }) => (*/}
-      {/*      <CreateChatHeader navigation={navigation} />*/}
-      {/*    ),*/}
-      {/*  }}*/}
-      {/*/>*/}
     </Stack.Navigator>
   );
 }

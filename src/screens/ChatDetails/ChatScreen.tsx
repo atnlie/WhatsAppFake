@@ -1,14 +1,9 @@
 import React from 'react';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {
-  ChatDetailMessageType,
-  ChatMessageType,
-  MessageType,
-} from '../../types.tsx';
+import {ChatDetailMessageType, ChatMessageType} from '../../types.tsx';
 import {View, LoaderScreen, Colors} from 'react-native-ui-lib';
 import styles from './ChatScreen.styles.ts';
 import ChatMessages from '../../components/Message/ChatMessage.tsx';
-// import BubbleMessage from '../../components/Bubble/BubbleMessage.tsx';
 
 type ChatScreenProps = {
   navigation: NativeStackNavigationProp<any, 'Chats'>;
@@ -41,7 +36,7 @@ const ChatScreen: React.FC<ChatScreenProps> = ({
       },
       {
         id: 2,
-        text: 'Yes, Bro! \nkenapa ini bisa mepet banget gini ya\kenapa ini bisa mepet banget gini ya',
+        text: 'Yes, Bro! \nkenapa ini bisa mepet banget gini yakenapa ini bisa mepet banget gini ya',
         last_update: '2023-08-06T08:42:51.620Z',
         isRead: true,
         byMe: false,
@@ -57,7 +52,7 @@ const ChatScreen: React.FC<ChatScreenProps> = ({
         id: 4,
         text: 'I want to go to the hospital',
         last_update: '2023-08-06T08:45:51.620Z',
-        isRead: true,
+        isRead: false,
         byMe: true,
       },
     ],

@@ -1,16 +1,10 @@
 import {CheckCircle, Check} from 'react-native-feather';
 import {Colors, View, Text} from 'react-native-ui-lib';
-// import { MessageData } from "../../types";
 import styles from './BubbleMessage.styles.ts';
-import { BubbleMessageProps, MessageType } from "../../types.tsx";
+import {MessageType} from '../../types.tsx';
 import dayjs from 'dayjs';
 
 export default function BubbleMessage(message: MessageType) {
-  console.log('Props ' + message);
-  // const currentUser = useSelector(
-  //   (state: RootState) => state.users.currentUser,
-  // );
-  // const {conversation} = message;
   const statusColor = message.isRead ? Colors.green30 : Colors.grey30;
   const isMyMessage = message.byMe;
   const isMessageRead = message.isRead;
